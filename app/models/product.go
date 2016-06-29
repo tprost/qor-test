@@ -10,4 +10,5 @@ import (
 type Product struct {
 	gorm.Model
 	Name string
+	Description string
 }

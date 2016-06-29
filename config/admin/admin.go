@@ -21,6 +21,9 @@ func init() {
 	Admin.AddMenu(&admin.Menu{Name: "Dashboard", Link: "/admin"})
 
 	// Add Product
-	Admin.AddResource(&models.Product{}, &admin.Config{Menu: []string{"Product Management"}})
+	product := Admin.AddResource(&models.Product{}, &admin.Config{Menu: []string{"Product Management"}})
+
+	product.Meta(&admin.Meta{Name: "Description", Type: "rich_editor"})
+
 }
 
